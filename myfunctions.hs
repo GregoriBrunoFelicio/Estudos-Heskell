@@ -42,3 +42,11 @@ myLength xs = sum [1 | _ <- xs]
 
 -- Tuples
 
+tuple = ("Gregori", "Felicio", 29)
+triangle = [(a,b,c) | c <- [1..10], b <- [1..10], a <- [1..10]]
+rightTriangles = [ (a,b,c) | c <- [1..10], b <- [1..c], a <- [1..b], a^2 + b^2 == c^2]   
+
+-- Types and Typeclass
+
+removeNonUppercase :: [Char] -> [Char]
+removeNonUppercase st = [c | c <- st, c `elem` ['A'..'Z']]
